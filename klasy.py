@@ -24,6 +24,19 @@ class Czlowiek:
     def przedstaw(self, osoba):
         print(f"Oto {osoba.imie}")
 
+
+class Dziecko(Czlowiek):
+    def baw_sie(self):
+        print("Ale zabawa!")
+
+    def przedstaw_sie(self):
+
+        print(f"hejcia jestem {self.imie}. Ja to ", end="")
+        if self.plec == "M":
+            print("chlopiec")
+        else:
+            print("dziewczynka")
+
 # Powstawanie obiektu , gotowanie z przepisu
 adam = Czlowiek("Adam", "M")
 ewa = Czlowiek("Ewa", "K")
@@ -34,3 +47,7 @@ ewa = Czlowiek("Ewa", "K")
 
 ewa.przedstaw_sie()
 ewa.przedstaw(adam)
+
+kain = Dziecko("Kain", "M")
+kain.baw_sie()
+kain.przedstaw_sie()
