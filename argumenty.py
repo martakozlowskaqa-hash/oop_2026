@@ -35,3 +35,26 @@ def dodaj4(*args, **kwargs):
     return wynik
 
 print(dodaj4(1, 2, 3, 6, verbose=True, parametr="wartosc"))
+
+
+
+# -------
+
+def zmien(a):
+    a = 8
+    return a
+
+a = 7
+#jest przekazuwana kopia argumentu
+zmien(a)
+print(a)
+
+def zmien_liste(lista):
+   #lista = ["HAHA!"]
+    lista.append("HAHA!")
+    return lista
+
+lista = [1,2]
+#tutaj nie jest przekazywana kopia
+zmien_liste(lista)
+print(lista)
